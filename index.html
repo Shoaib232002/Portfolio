@@ -88,7 +88,7 @@
                 <span
                   class="txt-rotate"
                   data-period="2000"
-                  data-rotate='[ "Pursuing MCA", "A Web developer", "An Android Developer"]'
+                  data-rotate='[ "Pursuing MCA", "into Web Development", "into Android Developer"]'
                 ></span>
               </h2>
             </div>
@@ -253,7 +253,7 @@
                 <div class="text pl-3">
                   <h2>Web Development(Intern)</h2>
                   <span class="position">OctaNet Services Pvt Ltd.</span>
-                  <p class="date">11/2024</p>
+                  <p class="date">11/202</p>
                   <div class="c d-flex ftco-animate"> 
                     </div>
                     <ul>
@@ -527,64 +527,83 @@
             </div>
           </div>
         </div>
-
+        
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form
-              method="POST"
-              action=""
-              class="bg-light p-4 p-md-5 contact-form"
-            >
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                />
+            <div class="form-group">
+              <form
+                id="feedback-form"
+                method="POST"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSeKkGysi5ZPYcxxm539TTH3CtVwVBxllnp0TJTY7L5xdOqcWg/formResponse"
+                class="bg-light p-4 p-md-5 contact-form"
+                target="_blank"
+                onsubmit="return showFeedbackMessage()"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="entry.409587316"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="entry.675326861"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    cols="30"
+                    rows="7"
+                    class="form-control"
+                    name="entry.1447078640"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    value="Send Feedback"
+                    class="btn btn-primary py-3 px-5"
+                  />
+                  <input type="hidden" name="_next" value="#contact-section" />
+                </div>
+              </form>
+              <!-- Feedback message -->
+              <div id="feedback-message" style="display: none; color: green; margin-top: 10px;">
+                Thank you for your feedback! 🎉
               </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  id=""
-                  cols="30"
-                  rows="7"
-                  class="form-control"
-                  name="message"
-                  placeholder="Message"
-                  required
-                ></textarea>
-              </div>
-
-              <div class="form-group">
-                <input
-                  type="submit"
-                  value="Send Message"
-                  class="btn btn-primary py-3 px-5"
-                />
-                <input type="hidden" name="_next" value="//" />
-              </div>
-            </form>
+            </div>
           </div>
-
+        
           <div class="col-md-6 d-flex">
-            <div
-              class="img"
-              style="background-image: url(images/AboutC.jpeg)"
-            ></div>
+            <div class="img" style="background-image: url(images/AboutC.jpeg)"></div>
           </div>
         </div>
+        
+        <!-- JavaScript for displaying feedback message -->
+        <script>
+          function showFeedbackMessage() {
+            setTimeout(() => {
+              document.getElementById("feedback-message").style.display = "block"; // Show success message
+            }, 500);
+        
+            setTimeout(() => {
+              document.getElementById("feedback-message").style.display = "none"; // Hide after 5s
+            }, 5000);
+        
+            return true; // Allows form submission
+          }
+        </script>
       </div>
-    </section>
+    </section>        
 
     <footer class="ftco-footer ftco-section">
       <div class="container">
@@ -728,3 +747,4 @@
    
   </body>
 </html>
+
